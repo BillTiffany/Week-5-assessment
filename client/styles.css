@@ -17,6 +17,8 @@
     margin-right: 350px;
     border-radius: 35px;
     border: rgb(97, 110, 167) 1px solid;
+    -webkit-box-shadow: 2px 5px 9px 0px rgba(0,0,0,0.83); 
+    box-shadow: 2px 5px 9px 0px rgba(0,0,0,0.83);
   }
   
   header:hover {
@@ -150,12 +152,14 @@
   #complimentButton{
     width: 100px;
     height: 50px;
+    font-weight: bold;
   }
 
   #fortuneButton{
     width: 100px;
     height: 50px;
     float: right;
+    font-weight: bold;
   }
 
   .affirmation-proud {
@@ -195,4 +199,3 @@
   height: 100%;
   pointer-events: none;
 }
-
