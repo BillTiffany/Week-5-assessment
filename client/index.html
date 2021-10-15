@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Festive&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+    <title>Back End Assessment</title>
+  </head>
+  <body class="container">
+    <button id="complimentButton">Get a compliment</button>
+    <button id ="fortuneButton">Get a Fortune</button>
+    <header>
+      <h1><u>Daily Affirmations</u></h1>
+  </header>
+  <!-- <div class="video-background"> -->
+    <!-- <div class="video-foreground"> -->
+      <!-- <iframe src="https://www.youtube.com/embed/98h3I58amR8" frameborder="0" allowfullscreen></iframe> -->
+    <!-- </div> -->
+  <!-- </div> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      document.getElementById("complimentButton").onclick = function () {
+        axios.get("http://localhost:4000/api/compliment/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+            });
+      };
+      </script>
+
+      <script>
+      document.getElementById("fortuneButton").onclick = function () {
+        axios.get("http://localhost:4000/api/fortune/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+            });
+      };
+      </script>
+      <main>
+      <body>
+      <form id ='affirmationForm'>
+        <input 
+            type='text'
+            id="feeling"
+            placeholder="How are you feeling today?"/>
+        <input 
+            type='text'
+            id="proud"
+            placeholder='What are you proud of today?'/>
+        <input 
+            type='text'
+            id="img"
+            placeholder='Paste an inspriational image'/>
+        <button>add affirmation</button>
+    </form>
+    <section id="affirmation-container"></section>
+    </body>
+    <footer id="footer">
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/98h3I58amR8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+  </footer>
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</main>
+</html>
